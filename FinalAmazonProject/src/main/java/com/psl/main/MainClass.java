@@ -18,10 +18,11 @@ public class MainClass {
 	
 	public static WinDPAPI winDPAPI;
 	static CopyToConfigFile c = new CopyToConfigFile();
+	static ReadConfigfile r = new ReadConfigfile();
 	
-	static String fileName = "F:\\My Data\\Education\\Persistent\\Programs\\FinalAmazonProject\\TextFile.txt";
-	static String propfile = "F:\\My Data\\Education\\Persistent\\Programs\\FinalAmazonProject\\Configs\\Configuation.properties";
-	static String propfile2 = "F:\\My Data\\Education\\Persistent\\Programs\\FinalAmazonProject\\Configs\\Configuation2.properties";
+	static String fileName = "C:\\Users\\Sujay\\git\\FinalAmazonProject\\FinalAmazonProject\\TextFile.txt";
+	static String propfile = "C:\\Users\\Sujay\\git\\FinalAmazonProject\\FinalAmazonProject\\Configs\\Configuation.properties";
+	static String propfile2 = "C:\\Users\\Sujay\\git\\FinalAmazonProject\\FinalAmazonProject\\Configs\\Configuation2.properties";
 	
 	
 	public static void security() throws InitializationFailedException, WinAPICallFailedException, IOException {
@@ -56,10 +57,10 @@ public class MainClass {
     	
     	c.copyDecrypted(propfile2, decrypted);
     	
-    	ReadConfigfile.getUrl();
-    	ReadConfigfile.getBrowser();
-    	ReadConfigfile.getEmailId();
-    	ReadConfigfile.getPassword();
+    	r.getUrl();
+    	r.getBrowser();
+    	r.getEmailId();
+    	r.getPassword();
     	
     	//credel.deleteFile();
 

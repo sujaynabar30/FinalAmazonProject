@@ -16,7 +16,7 @@ import java.util.Properties;
 public class ReadConfigfile {
 
 	private static Properties properties;
-	private final String propertyFilePath= "F:\\My Data\\Education\\Persistent\\Programs\\FinalAmazonProject\\Configs\\Configuation2.properties";
+	private static String propertyFilePath= "C:\\Users\\Sujay\\git\\FinalAmazonProject\\FinalAmazonProject\\Configs\\Configuation2.properties";
  
 	
 	public ReadConfigfile(){
@@ -32,39 +32,39 @@ public class ReadConfigfile {
 			}
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
-			throw new RuntimeException("Configuration.properties not found at " + propertyFilePath);
+			throw new RuntimeException("Configuration2.properties not found at " + propertyFilePath);
 		}		
 	}
 	
-	public static String getUrl()
+	public String getUrl()
 	{
 		String url = properties.getProperty("url");
 		System.out.println("\nUrl is :"+url);
 		if(url!= null) return url;
-		else throw new RuntimeException("url not specified in the Configuration.properties file.");	
+		else throw new RuntimeException("url not specified in the Configuration2.properties file.");	
 	}
 	
-	public static String getBrowser()
+	public String getBrowser()
 	{
 		String browser = properties.getProperty("browser");
 		System.out.println("Browser is :"+browser);
 		if(browser!= null) return browser;
-		else throw new RuntimeException("browser not specified in the Configuration.properties file.");	
+		else throw new RuntimeException("browser not specified in the Configuration2.properties file.");	
 	}
 	
-	public static String getEmailId(){
+	public String getEmailId(){
 		String emailid = properties.getProperty("emailid");
 		System.out.println("Email id is :"+emailid);
 		if(emailid!= null) return emailid;
-		else throw new RuntimeException("emailid not specified in the Configuration.properties file.");		
+		else throw new RuntimeException("emailid not specified in the Configuration2.properties file.");		
 	}
 	
-	public static String getPassword()
+	public String getPassword()
 	{
 		String password = properties.getProperty("password");
 		System.out.println("Password is :"+password);
 		if(password!= null) return password;
-		else throw new RuntimeException("password not specified in the Configuration.properties file.");	
+		else throw new RuntimeException("password not specified in the Configuration2.properties file.");	
 	}
 	
 	

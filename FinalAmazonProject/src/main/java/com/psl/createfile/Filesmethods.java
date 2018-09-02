@@ -6,8 +6,8 @@ import java.io.PrintWriter;
 
 public class Filesmethods {
 	
-	File file = new File("F:\\My Data\\Education\\Persistent\\Programs\\FinalAmazonProject\\Configs\\Configuation2.properties");
-	static String fileName = "F:\\My Data\\Education\\Persistent\\Programs\\FinalAmazonProject\\TextFile.txt";
+	File file = new File("C:\\Users\\Sujay\\git\\FinalAmazonProject\\FinalAmazonProject\\Configs\\Configuation2.properties");
+	static String fileName = "C:\\Users\\Sujay\\git\\FinalAmazonProject\\FinalAmazonProject\\TextFile.txt";
 	
 	public void createFile() {
 		

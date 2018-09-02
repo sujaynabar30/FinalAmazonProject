@@ -18,6 +18,7 @@ public class CopyToConfigFile {
 		// TODO Auto-generated method stub
 		
 		PrintWriter out = new PrintWriter(new FileWriter(propfile2));  				//write decrypted string to config2 file
+		System.out.println("\nDecrypted String Copied");
         out.print(decrypted);  
         out.close(); 
 

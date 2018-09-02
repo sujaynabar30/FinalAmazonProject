@@ -24,21 +24,23 @@ import com.psl.read.ReadConfigfile;
 public class AmazonMain extends ProductPage {
 	
 	public WebDriver driver;
-	Filesmethods credel = new Filesmethods();
 	 	
 	@BeforeTest
-	public void beforeTest() throws InitializationFailedException, WinAPICallFailedException, IOException
+	public void beforeTest() throws InitializationFailedException, WinAPICallFailedException, IOException, InterruptedException
 	{
+		 Filesmethods credel = new Filesmethods();
     	 credel.createFile();
 		 MainClass.security();		
-		 driver = BrowserFactory.startBrowser(ReadConfigfile.getBrowser(),ReadConfigfile.getUrl());
+		 ReadConfigfile r = new ReadConfigfile();
+		 driver = BrowserFactory.startBrowser(r.getBrowser(),r.getUrl());
 	}
 	
 	@Test
 	public void login()
 	{
 		VerifyAmazonLogin login = new VerifyAmazonLogin(driver);
-		login.verifyValidLogin(ReadConfigfile.getEmailId(),ReadConfigfile.getPassword());
+		ReadConfigfile r = new ReadConfigfile();
+		login.verifyValidLogin(r.getEmailId(),r.getPassword());
 	}
 	
 	/*@Test(dependsOnMethods={"login"},dataProvider = "SearchProvider", dataProviderClass = DataproviderClass.class)
@@ -64,6 +66,7 @@ public class AmazonMain extends ProductPage {
 	@AfterTest()
 	public void afterTest()
 	{
+		Filesmethods credel = new Filesmethods();
 		credel.deleteFile();
 		driver.quit();
 	}

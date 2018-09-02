@@ -1,4 +1,0 @@
-url=https://www.amazon.in/
-browser=chrome
-emailid=sujaynabar30@gmail.com
-password=mangirish
