@@ -43,7 +43,7 @@ public class AmazonMain extends ProductPage {
 		login.verifyValidLogin(r.getEmailId(),r.getPassword());
 	}
 	
-	/*@Test(dependsOnMethods={"login"},dataProvider = "SearchProvider", dataProviderClass = DataproviderClass.class)
+	@Test(dependsOnMethods={"login"},dataProvider = "SearchProvider", dataProviderClass = DataproviderClass.class)
 	public void proudctPage(String key) throws InterruptedException {
 		//Thread.sleep(3000);
 		testMethod(key,driver);			
@@ -61,7 +61,7 @@ public class AmazonMain extends ProductPage {
 	{
 		FilteringMouseHover mouse = new FilteringMouseHover(driver);
 		mouse.filterMouseHover();		
-	}*/
+	}
 	
 	@AfterTest()
 	public void afterTest()
