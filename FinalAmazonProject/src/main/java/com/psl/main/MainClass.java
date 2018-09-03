@@ -13,6 +13,11 @@ import com.psl.read.ReadFromConfigFile;
 
 import java.io.IOException;
 
+/**
+ * 
+ * @author sujay_nabar
+ * In this class encription and decryption process occurs
+ */
 
 public class MainClass {
 	
@@ -20,9 +25,9 @@ public class MainClass {
 	static CopyToConfigFile c = new CopyToConfigFile();
 	static ReadConfigfile r = new ReadConfigfile();
 	
-	static String fileName = "C:\\Users\\Sujay\\git\\FinalAmazonProject\\FinalAmazonProject\\TextFile.txt";
-	static String propfile = "C:\\Users\\Sujay\\git\\FinalAmazonProject\\FinalAmazonProject\\Configs\\Configuation.properties";
-	static String propfile2 = "C:\\Users\\Sujay\\git\\FinalAmazonProject\\FinalAmazonProject\\Configs\\Configuation2.properties";
+	static String fileName = "C:\\Users\\sujay_nabar\\git\\FinalAmazonProject\\FinalAmazonProject\\TextFile.txt";
+	static String propfile = "C:\\Users\\sujay_nabar\\git\\FinalAmazonProject\\FinalAmazonProject\\Configs\\Configuation.properties";
+	static String propfile2 = "C:\\Users\\sujay_nabar\\git\\FinalAmazonProject\\FinalAmazonProject\\Configs\\Configuation2.properties";
 	
 	
 	public static void security() throws InitializationFailedException, WinAPICallFailedException, IOException {
@@ -40,10 +45,10 @@ public class MainClass {
         
         if(!empty) {
         
-        System.out.println("Plain text:       \n" + plaintext);
+      //  System.out.println("Plain text:       \n" + plaintext);
         
         String encrypted = Encryption.encrypt(plaintext,winDPAPI);
-        System.out.println("\nEncrypted String: \n" + encrypted);
+       // System.out.println("\nEncrypted String: \n" + encrypted);
         
         c.copyEncrypted(propfile,encrypted);
         
@@ -53,14 +58,14 @@ public class MainClass {
         String encrypted = ReadFromConfigFile.readUsingFiles(propfile);	//this is used to read encripted string from config1 file
         
         String decrypted = Decryption.decrypt(encrypted,winDPAPI);
-        System.out.println("\nDecrypted String: \n" + decrypted);
+        //System.out.println("\nDecrypted String: \n" + decrypted);
     	
     	c.copyDecrypted(propfile2, decrypted);
     	
-    	r.getUrl();
-    	r.getBrowser();
-    	r.getEmailId();
-    	r.getPassword();
+    	//r.getUrl();
+    	//r.getBrowser();
+    	//r.getEmailId();
+    	//r.getPassword();
     	
     	//credel.deleteFile();
 

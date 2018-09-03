@@ -70,15 +70,15 @@ public class VerifyAmazonLogin {
 			e.printStackTrace();
 		}*/
 		
-		LoginPage login_page = PageFactory.initElements(driver, LoginPage.class);        //created page object using page factory
+		Assert.assertEquals(driver.getTitle(), "Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in");
+		//verify the main page
 		
-		login_page.loginToAmazon(username,pass);				//call the method
+		LoginPage login_page = PageFactory.initElements(driver, LoginPage.class);        //created page object using page factory
+		login_page.loginToAmazon(username,pass);	 //call the method (this will call all the login elements)
 		
 		WebElement verify = driver.findElement(By.xpath("//*[@id=\"nav-link-yourAccount\"]/span[1]"));
 		String check = verify.getText();
 		//System.out.println(check);
-		
-		Assert.assertEquals(driver.getTitle(), "Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in");
 		
 		if(check.equals("Hello, NABAR")) {
 			System.out.println("Logged in Sucessfully");

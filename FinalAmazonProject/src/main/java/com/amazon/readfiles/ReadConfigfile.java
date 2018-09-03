@@ -16,7 +16,7 @@ import java.util.Properties;
 public class ReadConfigfile {
 
 	private Properties properties;
-	private final String propertyFilePath= "C:\\Users\\USER\\git\\AssignmentModified\\AmazonProject\\Configs\\Configuation.properties";
+	private final String propertyFilePath= "C:\\Users\\sujay_nabar\\git\\FinalAmazonProject\\FinalAmazonProject\\Configs\\Configuation.properties";
  
 	
 	public ReadConfigfile(){

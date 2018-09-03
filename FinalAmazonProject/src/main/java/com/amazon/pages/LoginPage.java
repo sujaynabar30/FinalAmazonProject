@@ -52,6 +52,7 @@ public class LoginPage {
 	}
 	
 	@FindBy(id="ap_email")
+	@CacheLookup
 	WebElement email;
 	
 	@FindBy(id="ap_password")

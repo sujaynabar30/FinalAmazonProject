@@ -8,6 +8,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.PageFactory;
+
+import com.amazon.pages.FilteringMouseHoverPage;
+import com.amazon.pages.LoginPage;
 
 /**
  * 
@@ -28,7 +32,10 @@ public class FilteringMouseHover {
 	public void filterMouseHover() {
 		// TODO Auto-generated method stub
 		
-		WebElement search = driver.findElement(By.id("twotabsearchtextbox"));           //find search box and send keys mobiles
+		FilteringMouseHoverPage filtermousehover_page = PageFactory.initElements(driver, FilteringMouseHoverPage.class); 
+		filtermousehover_page.sortMouseHover();
+		
+	/*	WebElement search = driver.findElement(By.id("twotabsearchtextbox"));           //find search box and send keys mobiles
 		search.sendKeys("mobiles");
 		driver.findElement(By.className("nav-input")).click();
 		
@@ -57,14 +64,14 @@ public class FilteringMouseHover {
 		System.out.println("checkbox 4 checked");
 		driver.navigate().refresh();
 		
-		/*Actions builder = new Actions(driver);
+		Actions builder = new Actions(driver);
 		WebElement checkbox1 = driver.findElement(By.xpath("//*[@id=\"leftNavContainer\"]/ul[2]/div/li/span/span/div/label/input"));
 		Action mouseOverHome = builder.click(checkbox1).build();
 		mouseOverHome.perform();
 		
 		WebElement checkbox2 = driver.findElement(By.xpath("//*[@id=\"leftNavContainer\"]/ul[3]/div/li/span/span/div/label/input"));
 		Action mouseOverHome2 = builder.click(checkbox2).build();
-		mouseOverHome2.perform();*/
+		mouseOverHome2.perform();
 		
 		WebElement min = driver.findElement(By.id("low-price"));								//price sorting
 		min.sendKeys("10000");
@@ -94,6 +101,6 @@ public class FilteringMouseHover {
 		clickele.click();
 		//builder.moveToElement(hoverTabs).moveToElement(hoverTabslink).moveToElement(driver.findElement(By.linkText("All Mobile Accessories"))).click().build().perform();
 		//System.out.println("mouse on the shopbycategory");
-		System.out.println("\nHover overtabs is successful");
+		System.out.println("\nHover overtabs is successful");*/
 	}
 }

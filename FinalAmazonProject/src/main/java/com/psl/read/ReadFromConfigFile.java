@@ -4,6 +4,12 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
+/**
+ * 
+ * @author sujay_nabar
+ *This class is used to copy contents from config file
+ */
+
 public class ReadFromConfigFile {
 	
 	public static String readUsingFiles(String fileName) {

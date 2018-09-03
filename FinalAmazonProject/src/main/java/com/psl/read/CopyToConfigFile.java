@@ -4,6 +4,12 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+/**
+ * 
+ * @author sujay_nabar
+ *This class is used to copy contents to config file
+ */
+
 public class CopyToConfigFile {
 	
 	public void copyEncrypted(String propfile, String encrypted) throws IOException {
